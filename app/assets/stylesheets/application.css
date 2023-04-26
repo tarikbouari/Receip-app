@@ -2,8 +2,57 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   background-color: bisque;
 }
+
+/* Recipe Index Page */
+
+.container {
+  max-width: 600px;
+  margin: 35px auto;
+}
+
+.recipe-card {
+  display: flex;
+  background-color: #fff;
+  margin: 35px auto;
+  padding: 2em;
+  border: solid 1px #00000052;
+  box-shadow: 0 0 7px 1px rgba(46, 46, 48, 0.61);
+}
+
+.index-links,
+.index-desc {
+  width: 50%;
+}
+
+.index-links {
+  gap: 5em;
+}
+
+.recipe-name {
+  margin-bottom: 50px;
+}
+
+.btn {
+  text-decoration: none;
+  color: #008fef;
+  width: 10em;
+  height: 3em;
+  background-color: #f0f8ff;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(46, 46, 48, 0.61);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #008fef;
+  color: #fff;
+}
+
+/* End of recipe index page */
