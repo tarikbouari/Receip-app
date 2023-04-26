@@ -16,9 +16,15 @@ body {
   margin: 35px auto;
 }
 
+a {
+  text-decoration: none;
+  color: #008fef;
+}
+
 .recipe-card {
   display: flex;
   background-color: #fff;
+  width: 100%;
   margin: 35px auto;
   padding: 2em;
   border: solid 1px #00000052;
@@ -53,6 +59,11 @@ body {
 .btn:hover {
   background-color: #008fef;
   color: #fff;
+}
+
+.add-rec-btn {
+  float: right;
+  margin-bottom: 3em;
 }
 
 /* End of recipe index page */

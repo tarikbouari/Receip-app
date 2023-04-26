@@ -1,19 +1,23 @@
 <section class="container">
-<%= button_to 'Add recipe', new_user_recipe_path(:user_id), method: :get, class: "btn" %>
+<%= button_to 'Add recipe', new_user_recipe_path(:user_id), method: :get, class: "btn add-rec-btn" %>
 <% if @recipes.any? %>
 <% @recipes.each do |recipe| %>
   <div class="recipe-card">
     <div class="index-links">
-      <div class="recipe-name"><b><%= recipe.name.upcase %></b></div>
-      <%= button_to 'REMOVE', "users/#{current_user.id}/recipes/#{recipe.id}", method: :delete, class: "btn" %>
+      <div class="recipe-name"><b><%= link_to recipe.name.upcase, user_recipe_path(current_user, recipe), method: :get %></b></div>
+      <%= button_to 'REMOVE', "/users/#{recipe.user_id}/recipes/#{recipe.id}", method: :delete, class: "btn" %>
     </div>
 
     <div class="index-desc">
-       Description of <%= recipe.name %>
-       <hr /><br />
+       Description of <%= recipe.name %>:
+      <hr /><br />
       <p><%= recipe.description %></p>
     </div>
   </div>
   <% end %>
+<% else %>
+  <div class="recipe-card">
+    <p>There are no recipes yet</p>
+  </div>
   <% end %>
 </section>
