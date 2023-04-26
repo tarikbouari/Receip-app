@@ -7,3 +7,34 @@
 body {
   background-color: bisque;
 }
+
+/* foodlist page */
+.btn-food {
+  /* display: flex !important;
+  justify-content: flex-end !important;
+  width: fit-content !important; */
+  align-items: end !important;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.ctn-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #e5e9f5;
+}
+
+.form {
+  background-color: #a5adf6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}

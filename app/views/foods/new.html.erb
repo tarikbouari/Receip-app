@@ -1,0 +1,37 @@
+<section class="container">
+ <section class=" ctn-form py-5 ">
+ <div class="w-50 d-flex flex-column py-3 px-5">
+ <h2> Add your ingredient</h2>
+ <p>
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+ Vestibulum non dui sit amet elit pretium eleifend. Suspendisse metus erat, ,
+ </p>
+ 
+ </div>
+ <%= form_with model: @new_food, class: ' form px-5 w-60', url: user_foods_path  do |form|  %>
+   
+    <div class="form-label my-3">
+    <label >Food name</label>
+    <%= form.text_field :name %>
+    </div>
+
+    <div class="form-label my-3">
+    <label >Measurement_unit</label>
+    <%= form.text_field :measurement_unit %>
+    </div>
+    <div class="form-label my-3">
+    <label > Price</label>
+    <%= form.text_field :price %>
+    </div>
+    <div class="form-label my-3">
+    <label>Quantity</label>
+    <%= form.text_field :quantity %>
+    </div>
+    
+    <div class="form-label my-3">
+    <%= form.submit  'Create food', class: 'btn btn-gradient btn-primary block' %>
+    </div>
+    
+  <% end %>
+  </section>
+</section>
