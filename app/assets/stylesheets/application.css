@@ -4,10 +4,9 @@
   box-sizing: border-box;
 }
 
-body  {
+body {
   background-color: bisque;
 }
-
 
 /* foodlist page */
 .btn-food {
@@ -16,12 +15,11 @@ body  {
   width: fit-content !important; */
   align-items: end !important;
 }
-.form-label { 
+
+.form-label {
   display: flex;
   flex-direction: column;
   font-size: larger;
-  
-  /* width: fit-content; */
 }
 
 .ctn-form {
@@ -29,7 +27,6 @@ body  {
   justify-content: center;
   width: 100%;
   background-color: #e5e9f5;
-
 }
 
 .form {
@@ -39,5 +36,5 @@ body  {
   justify-content: center;
   align-items: center;
   border-radius: 0.5rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
 }
