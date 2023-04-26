@@ -4,7 +4,7 @@ class FoodsController < ApplicationController
     end
 
     def new 
-        @new_food = food.new
+        @new_food = Food.new
     end
 
     def destroy
