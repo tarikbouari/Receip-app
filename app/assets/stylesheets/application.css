@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
-body {
+body  {
   background-color: bisque;
+}
+
+.btn-food {
+  /* display: flex !important;
+  justify-content: flex-end !important;
+  width: fit-content !important; */
+  align-items: end !important;
 }
