@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #008fef;
 }
 
@@ -38,6 +39,7 @@ a {
 
 .index-links {
   gap: 5em;
+  text-decoration: none;
 }
 
 .recipe-name {
