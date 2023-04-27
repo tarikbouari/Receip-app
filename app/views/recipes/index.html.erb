@@ -1,5 +1,5 @@
 <section class="container">
-<%= button_to 'Add recipe', new_user_recipe_path(:user_id), method: :get, class: "btn add-rec-btn" %>
+<%= button_to 'Add recipe', new_user_recipe_path(user_id: current_user.id), method: :get, class: "btn add-rec-btn" %>
 <% if @recipes.any? %>
 <% @recipes.each do |recipe| %>
   <div class="recipe-card">
