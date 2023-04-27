@@ -58,7 +58,8 @@ a {
 
 .btn:hover {
   background-color: #008fef67 !important;
-  color: #fff !important;
+  color: #0D6EFD !important;
+  font-weight: bold;
 }
 
 .add-rec-btn {
