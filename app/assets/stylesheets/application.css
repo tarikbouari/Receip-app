@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
 }
 
 body {
@@ -39,7 +38,6 @@ a {
 
 .index-links {
   gap: 5em;
-  text-decoration: none;
 }
 
 .recipe-name {
@@ -59,8 +57,8 @@ a {
 }
 
 .btn:hover {
-  background-color: #008fef;
-  color: #fff;
+  background-color: #008fef !important;
+  color: #fff !important;
 }
 
 .add-rec-btn {
