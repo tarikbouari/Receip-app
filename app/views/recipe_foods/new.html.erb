@@ -8,29 +8,22 @@
  </p>
  
  </div>
- <%= form_with model: @new_food, class: ' form px-5 w-60', url: user_foods_path  do |form|  %>
+ <%= form_with model: @new_recipe_food, url: user_recipe_recipe_foods_path, method: :post, scope: :recipe_food do |form|  %>
    
-    <div class="form-label my-3">
-    <label >Food name</label>
-    <%= form.text_field :name %>
+    <div class="form-label mb-3">
+    <%= form.label :quantity  %>
+    <%= form.number_field :quantity %>
     </div>
 
-    <div class="form-label my-3">
-    <label >Measurement_unit</label>
-    <%= form.text_field :measurement_unit %>
+    <div class="form-label mb-3">
+    <%= form.label :food_id %>
+    <%= form.select(:food_id, Food.all.map{|u| [u.name, u.id]},{ include_blank: true}) %>
     </div>
-    <div class="form-label my-3">
-    <label > Price</label>
-    <%= form.text_field :price %>
+
+    <div class="form-label mb-3">
+    <%= form.submit 'Add Ingredient', class: 'btn btn-outline-primary' %>
     </div>
-    <div class="form-label my-3">
-    <label>Quantity</label>
-    <%= form.text_field :quantity %>
-    </div>
-    
-    <div class="form-label my-3">
-    <%= form.submit  'Create food', class: 'btn btn-gradient btn-primary block' %>
-    </div>
+
     
   <% end %>
   </section>

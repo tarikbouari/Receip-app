@@ -5,7 +5,7 @@ class RecipeFoodsController < ApplicationController
   end
 
   def create
-    @recipe_food = Recipe.new(rf_params)
+    @recipe_food = RecipeFood.new(rf_params)
     if @recipe_food.save!
       flash[:sucess] = "food successfully created"
     else
@@ -21,9 +21,9 @@ class RecipeFoodsController < ApplicationController
   # create method for id
 
   def u_id
-    @user = User.find(params[:id])  
+    @user = User.find(params[:user_id])  
   end
   def r_id
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find(params[:recipe_gid])
   end
 end
