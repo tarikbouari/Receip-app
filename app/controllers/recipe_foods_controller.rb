@@ -18,12 +18,27 @@ class RecipeFoodsController < ApplicationController
     params.require(:recipe_food).permit(:food_id, :quantity).merge(recipe_id:params[:recipe_id])
   end
 
+  def destroy
+    recipe_food = RecipeFood.find(params[:id])
+
+    if recipe_food.destroy
+      flash[:success] = "food successfully destroyed"
+    else
+      flash.now[:error] = "failed"
+    end
+    redirect_to user_recipe_path(u_id, r_id)
+  end
+
+  def update
+    
+  end
+
   # create method for id
 
   def u_id
     @user = User.find(params[:user_id])  
   end
   def r_id
-    @recipe = Recipe.find(params[:recipe_gid])
+    @recipe = Recipe.find(params[:recipe_id])
   end
 end
