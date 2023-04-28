@@ -3,11 +3,11 @@
     <div class="d-flex justify-content-center  gap-8 p-5 my-5 bg-light">
          <div class="w-50">
              <h4 class="text-center"> Amount of food items to buy: </h4>
-             <h4 class="text-primary text-center" ><%= @amount_of_food %> </h4>
+             <h4 class="text-primary text-center" ><%= @amount_of_food %>  </h4>
          </div>
         <div class="w-50">
         <h4 class="text-center" > Total amount of food needed: </h4>
-        <h4 class="text-primary text-center" ><%= @total %> </h4>
+        <h4 class="text-primary text-center" >$<%= @total %> </h4>
         </div>
         
     </div>
@@ -26,12 +26,12 @@
           <tr>
             <td rowspan='4'><i>No recipes</i></td>
           </tr>
-        <% else %>
+        <% else %> 
           <% @recipe_foods_arr.each_with_index do |recipe, i| %>
             <tr>
               <th scope="row"><%= 1 + i %></th>
               <td><%= recipe.food.name%></td>
-              <td><%= recipe.food.quantity %></td>
+              <td><%= recipe.food.quantity %> &nbsp;<%= recipe.food.measurement_unit %> </td>
               <td> <%= '$'+(recipe.food.price * recipe.quantity).to_s %></td>
             </tr>
           <% end %>
