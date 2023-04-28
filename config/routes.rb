@@ -12,8 +12,5 @@ Rails.application.routes.draw do
       resources :recipe_foods
     end
   end
-<<<<<<< HEAD
   resources :public_recipes
-=======
->>>>>>> ea90dd1e32e23b987abca5b1494e7ecb279897a0
 end
