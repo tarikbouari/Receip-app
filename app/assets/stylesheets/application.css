@@ -5,8 +5,8 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-  background-color: bisque;
+nav li {
+  list-style: none;
 }
 
 /* Recipe Index Page */
@@ -103,4 +103,45 @@ a {
 
 .ctn-checkbox {
   gap: 1rem;
+}
+
+/* style navigation **/
+
+.ctn-logo {
+  width: 40% !important;
+}
+.nav-ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 40% !important;
+}
+
+.nav-ul li a{
+  color: #fff !important;
+}
+
+.nav-ul li a:hover {
+  color: aquamarine;
+}
+
+.logo {
+  font-size: larger;
+  color: #fff;
+}
+
+.box-regi {
+  display: flex;
+  width: 20% !important;
+  justify-content: space-around;
+}
+
+.btn-login {
+  background-color: #f9fafc;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.ctn-nav {
+  background-color: #84b74e !important;
 }
