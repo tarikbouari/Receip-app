@@ -44,7 +44,7 @@ a {
   margin-bottom: 50px;
 }
 
-.btn {
+.btna {
   text-decoration: none;
   color: #008fef;
   width: 10em;
@@ -56,12 +56,12 @@ a {
   cursor: pointer;
 }
 
-.btn:hover {
+.btna:hover {
   background-color: #008fef;
   color: #fff;
 }
 
-.add-rec-btn {
+.adda-rec-btn {
   float: right;
   margin-bottom: 3em;
 }
@@ -70,9 +70,6 @@ a {
 
 /* foodlist page */
 .btn-food {
-  /* display: flex !important;
-  justify-content: flex-end !important;
-  width: fit-content !important; */
   align-items: end !important;
 }
 
@@ -110,6 +107,7 @@ a {
 .ctn-logo {
   width: 40% !important;
 }
+
 .nav-ul {
   display: flex;
   justify-content: space-around;
@@ -117,7 +115,7 @@ a {
   width: 40% !important;
 }
 
-.nav-ul li a{
+.nav-ul li a {
   color: #fff !important;
 }
 

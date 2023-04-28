@@ -19,4 +19,3 @@ class ShoppingListController < ApplicationController
     @recipe_foods_arr
   end
 end
-
