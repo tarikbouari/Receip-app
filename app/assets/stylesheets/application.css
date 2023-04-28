@@ -44,7 +44,7 @@ a {
   margin-bottom: 50px;
 }
 
- .btn {
+.btn {
   text-decoration: none;
   color: #008fef;
   width: 10em;
@@ -57,11 +57,10 @@ a {
 }
 
 .btn:hover {
-
   background-color: #008fef;
   color: #fff;
 }
- 
+
 .add-rec-btn {
   float: right;
   margin-bottom: 3em;
