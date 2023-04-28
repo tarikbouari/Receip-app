@@ -21,7 +21,7 @@
 
     <div class="ctn-btn d-flex justify-content-between my-3 ">
 
-      <%= link_to 'General shopping list', new_user_recipe_recipe_food_path(@recipe.user_id,@recipe.id), 'data-ripple-light': true, class: "btn btn-outline-primary btn-sm"%>
+      <%= link_to 'General shopping list', user_recipe_shopping_list_index_path(@recipe.user_id,@recipe.id), 'data-ripple-light': true, class: "btn btn-outline-primary btn-sm"%>
       <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(@recipe.user_id,@recipe.id), 'data-ripple-light': true, class: "btn btn-outline-primary btn-sm" %>
 
     </div>
