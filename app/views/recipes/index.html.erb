@@ -11,7 +11,7 @@
     <div class="index-desc">
        Description of <%= recipe.name %>:
       <hr /><br />
-      <p><%= recipe.description %></p>
+      <p><%= truncate(recipe.description, length: 100, seperator: '...') %></p>
     </div>
   </div>
   <% end %>

@@ -17,7 +17,7 @@ body {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: #008fef;
 }
 
@@ -44,12 +44,12 @@ a {
   margin-bottom: 50px;
 }
 
-/* .btn {
+ .btn {
   text-decoration: none;
   color: #008fef;
   width: 10em;
   height: 3em;
-  background-color: #f0f8ff;
+  background-color: #e5e6e7a2 !important;
   border-radius: 4px;
   border: none;
   box-shadow: 5px 5px 10px rgba(46, 46, 48, 0.61);
@@ -57,10 +57,11 @@ a {
 }
 
 .btn:hover {
+
   background-color: #008fef;
   color: #fff;
-} */
-
+}
+ 
 .add-rec-btn {
   float: right;
   margin-bottom: 3em;
