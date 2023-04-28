@@ -5,7 +5,7 @@
   <div class="recipe-card">
     <div class="index-links">
       <div class="recipe-name"><b><%= link_to recipe.name.upcase, user_recipe_path(current_user, recipe), method: :get %></b></div>
-      <%= button_to 'REMOVE', "/users/#{recipe.user_id}/recipes/#{recipe.id}", method: :delete, class: "btn" %>
+      <%= button_to 'Remove recipe', "/users/#{recipe.user_id}/recipes/#{recipe.id}", method: :delete, class: "btn" %>
     </div>
 
     <div class="index-desc">
