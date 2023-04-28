@@ -2,6 +2,7 @@
 <%= button_to 'Add recipe', new_user_recipe_path(user_id: current_user.id), method: :get, class: "btn add-rec-btn" %>
 <% if @recipes.any? %>
 <% @recipes.each do |recipe| %>
+  <% if !current_user.nil? && current_user.id == recipe.user_id %>
   <div class="recipe-card">
     <div class="index-links">
       <div class="recipe-name"><b><%= link_to recipe.name.upcase, user_recipe_path(current_user, recipe), method: :get %></b></div>
@@ -14,6 +15,7 @@
       <p><%= truncate(recipe.description, length: 100, seperator: '...') %></p>
     </div>
   </div>
+  <%end%>
   <% end %>
 <% else %>
   <div class="recipe-card">
