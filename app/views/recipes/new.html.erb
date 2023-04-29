@@ -2,7 +2,7 @@
  <div class="d-flex flex-column py-3 px-5 recipe-heading">
  <h2> Add your recipe</h2>
  </div>
- <%= form_with model: @new_food, class: ' form px-5 w-60', url: user_foods_path  do |form|  %>
+ <%= form_with model: @recipe, class: ' form px-5 w-60', url: user_recipes_path do |form|  %>
    
     <div class="form-label my-3">
     <label >Recipe name</label>
