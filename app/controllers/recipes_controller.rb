@@ -31,6 +31,6 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(:user_id, :name, :preparation_time, :cooking_time, :description, :public)
-    .tap { |p| p[:public] = p[:public] == '1' }
+      .tap { |p| p[:public] = p[:public] == '1' }
   end
 end
