@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav li {
+  list-style: none;
+}
+
+/* Recipe Index Page */
+
+.container {
+  max-width: 600px;
+  margin: 35px auto;
+}
+
+a {
+  text-decoration: none !important;
+  color: #008fef;
+}
+
+.recipe-card {
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  margin: 35px auto;
+  padding: 2em;
+  border: solid 1px #00000052;
+  box-shadow: 0 0 7px 1px rgba(46, 46, 48, 0.61);
+}
+
+.index-links,
+.index-desc {
+  width: 50%;
+}
+
+.index-links {
+  gap: 5em;
+}
+
+.recipe-name {
+  margin-bottom: 50px;
+}
+
+.btna {
+  text-decoration: none;
+  color: #008fef;
+  width: 10em;
+  height: 3em;
+  background-color: #e5e6e7a2 !important;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 5px 5px 10px rgba(46, 46, 48, 0.61);
+  cursor: pointer;
+}
+
+.btna:hover {
+  background-color: #008fef;
+  color: #fff;
+}
+
+.adda-rec-btn {
+  float: right;
+  margin-bottom: 3em;
+}
+
+/* End of recipe index page */
+
+/* foodlist page */
+.btn-food {
+  align-items: end !important;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+
+.ctn-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #e5e9f5;
+}
+
+.form {
+  background-color: #a5adf6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+/**  Style Recipes details **/
+
+.ctn-checkbox {
+  gap: 1rem;
+}
+
+/* style navigation **/
+
+.ctn-logo {
+  width: 40% !important;
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  width: 40% !important;
+}
+
+.nav-ul li a {
+  color: #fff !important;
+}
+
+.nav-ul li a:hover {
+  color: aquamarine;
+}
+
+.logo {
+  font-size: larger;
+  color: #fff;
+}
+
+.box-regi {
+  display: flex;
+  width: 20% !important;
+  justify-content: space-around;
+}
+
+.btn-login {
+  background-color: #f9fafc;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.ctn-nav {
+  background-color: #84b74e !important;
+}
+
+/* Recipe page */
+
+.recipe-heading {
+  text-align: center !important;
+}

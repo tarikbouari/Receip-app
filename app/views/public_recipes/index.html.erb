@@ -1,0 +1,19 @@
+<section class="container">
+  <h2>Public Recipes</h2>
+
+  <% @index.each do |recipe| %>
+  <a href="<%= user_recipe_path(current_user, recipe) %>">
+  <div class="recipe-card">
+    <div class="index-links">
+      <b><%= recipe.name %></b><br />
+      By: <%= recipe.user.name %>
+    </div>
+      
+    <div class="index-desc">
+      <span>Total food items: <%= recipe.recipe_foods.count %></span><br />
+      <span>Total price: <%= recipe.total_price %></span>
+    </div>
+  </div>
+  </a>
+  <% end %>
+</section>

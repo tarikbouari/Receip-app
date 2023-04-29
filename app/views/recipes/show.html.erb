@@ -1,0 +1,68 @@
+<section class=" container">
+<h2 class="text-center my-5"> <%= @recipe.name %></h2> 
+    <div class="ctn-head d-flex justify-content-between my-3">
+      
+       <div class=" d-flex flex-column ">
+            <h4>preparation time: <%= @recipe.preparation_time %> h </h4>
+            <hr>
+            <h4>Cooking time: <%= @recipe.cooking_time %> h </h4>
+       </div>
+
+        <div class="ctn-checkbox d-flex justify-content-end">
+           
+        <input type="checkbox" class="form-check-input" id="public" 
+        <% if @recipe.public %>
+        checked="checked" 
+        <% end %>
+       
+        <label class="form-check-label" for="public">Public</label>
+    </div>
+    </div>
+
+    <div class="ctn-btn d-flex justify-content-between my-3 ">
+
+      <%= link_to 'General shopping list', user_recipe_shopping_list_index_path(@recipe.user_id,@recipe.id), 'data-ripple-light': true, class: "btn btn-outline-primary btn-sm"%>
+      <%= link_to 'Add ingredient', new_user_recipe_recipe_food_path(@recipe.user_id,@recipe.id), 'data-ripple-light': true, class: "btn btn-outline-primary btn-sm" %>
+
+    </div>
+    
+
+       
+        <table class="table  table-bordered table-hover bs my-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Food</th>
+            <th scope="col">Quantity </th>
+            <th scope="col">Unit price in $ </th>
+            <th scope="col">Value</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+    
+        <tbody>
+        <% if @recipe.foods.empty? %>
+                <tr>
+                    <th colspan='5'>
+                    <i>No food or ingredients added</i>
+                    </th>
+                </tr>
+        <% else %>
+
+                <% @recipe_foods.each_with_index do |rf, i| %>
+                     <tr>
+                        <th scope="row"><%= i+1  %></th>
+                        <td><%= rf.food.name %></td>
+                        <td><%= rf.quantity %></td>
+                        <td><%= '$' + rf.food.price.to_s %></td>
+                        <td><%= '$' + (rf.food.price * rf.quantity).to_s %></td>
+                        <td><%= button_to 'delete', user_recipe_recipe_food_path(@recipe.user_id, @recipe.id, rf.id), method: :delete, 'data-ripple-light': true,  class: "btn btn-outline-danger" %></td>
+           
+                    </tr>
+        <%end%>
+        <% end%>
+        </tbody>
+        </table>
+  
+
+</section>

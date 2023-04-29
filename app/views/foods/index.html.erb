@@ -1,0 +1,35 @@
+<section class="container">
+    <h1 class="text-center my-3">Welcome to food list </h1>
+    <section class="div-table mx-3">
+        <%= link_to 'Add food', new_user_food_path, 'data-ripple-light': true,  class: "btn btn-outline-primary btn-food" %>
+        
+        <table class="table  table-bordered table-hover bs my-5">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Food</th>
+            <th scope="col">Measurement unit kg</th>
+            <th scope="col">Unit price in $ </th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @foods.each do |food|  %>
+          <% if !current_user.nil? && current_user.id == food.user_id %>
+          <tr>
+            <th scope="row"><%= food.id %></th>
+            <td><%= food.name %></td>
+            <td><%= food.measurement_unit %></td>
+            <td><%= food.price %></td>
+            <td><%= button_to 'delete', user_food_path(food.user_id, food.id), method: :delete, 'data-ripple-light': true,  class: "btn btn-outline-danger" %></td>
+           
+          </tr>
+          <%end%>
+          <% end%>
+        </tbody>
+      </table>
+
+    </section>
+
+</section>
