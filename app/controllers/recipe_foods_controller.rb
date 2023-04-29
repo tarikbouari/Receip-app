@@ -6,9 +6,9 @@ class RecipeFoodsController < ApplicationController
   def create
     @recipe_food = RecipeFood.new(rf_params)
     if @recipe_food.save!
-      flash[:sucess] = 'food successfully created'
+      flash.now[:notice] = 'food successfully created'
     else
-      flash[:error] = 'failed to add food to recipe'
+      flash.now[:alert] = 'failed to add food to recipe'
     end
     redirect_to user_recipe_path(u_id, r_id)
   end
@@ -21,9 +21,9 @@ class RecipeFoodsController < ApplicationController
     recipe_food = RecipeFood.find(params[:id])
 
     if recipe_food.destroy
-      flash[:success] = 'food successfully destroyed'
+      flash.now[:notice] = 'food successfully destroyed'
     else
-      flash.now[:error] = 'failed'
+      flash.now[:alert] = 'failed'
     end
     redirect_to user_recipe_path(u_id, r_id)
   end

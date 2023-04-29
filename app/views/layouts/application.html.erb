@@ -12,6 +12,22 @@
 
   <body>
   <%= render 'home/nav'%>
+  <%= render 'shared/flashes' %>
+  <div class='container'>
+        <% if alert %>
+          <div class='d-flex justify-content-center alert alert-warning alert-dismissible fade show role'>
+            <%= alert %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% end %>
+        <% if notice %>
+          <div class='d-flex justify-content-center alert alert-info alert-dismissible fade show role'>
+            <%= notice %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <%= yield %>
   </body>
 </html>
