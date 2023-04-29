@@ -1,2 +1,37 @@
-<h1>Recipes#new</h1>
-<p>Find me in app/views/recipes/new.html.erb</p>
+<section class="container">
+ <div class="d-flex flex-column py-3 px-5 recipe-heading">
+ <h2> Add your recipe</h2>
+ </div>
+ <%= form_with model: @new_food, class: ' form px-5 w-60', url: user_foods_path  do |form|  %>
+   
+    <div class="form-label my-3">
+    <label >Recipe name</label>
+    <%= form.text_field :name %>
+    </div>
+
+    <div class="form-label my-3">
+    <label >Preperation time</label>
+    <%= form.text_field :preparation_time %>
+    </div>
+
+    <div class="form-label my-3">
+    <label >Cooking time</label>
+    <%= form.text_field :cooking_time %>
+    </div>
+
+    <div class="form-label my-3">
+    <label>Description</label>
+    <%= form.text_field :description %>
+    </div>
+
+    <div class="form-label my-3 check-box">
+    <%= form.label :Public %>
+    <%= form.check_box :public %>
+    </div>
+    
+    <div class="form-label my-3">
+    <%= form.submit  'Add recipe', class: 'btn btn-gradient btn-primary block' %>
+    </div>
+    
+  <% end %>
+</section>
