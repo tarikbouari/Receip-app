@@ -143,3 +143,9 @@ a {
 .ctn-nav {
   background-color: #84b74e !important;
 }
+
+/* Recipe page */
+
+.recipe-heading {
+  text-align: center !important;
+}
