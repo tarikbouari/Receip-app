@@ -14,7 +14,7 @@ class RecipesController < ApplicationController
 
   def create
     @user = current_user
-    @recipe = Recipe.new(recipe_params)
+    @recipe = @user.recipes.new(recipe_params)
     if @recipe.save
       redirect_to user_recipe_path(@user, @recipe)
     else
@@ -31,5 +31,6 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(:user_id, :name, :preparation_time, :cooking_time, :description, :public)
+    .tap { |p| p[:public] = p[:public] == '1' }
   end
 end
