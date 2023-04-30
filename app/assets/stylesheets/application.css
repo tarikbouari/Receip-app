@@ -149,3 +149,35 @@ a {
 .recipe-heading {
   text-align: center !important;
 }
+
+/** Style Home Page ***/
+
+.ctn-text {
+  display: flex !important;
+  flex-direction: column;
+  gap:1rem !important;
+  width: 60%;
+ 
+
+}
+
+.head-text {
+ font-weight: 600;
+ color:#84b74e
+}
+.ctn-session { 
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.b-text {
+  width:90%;
+}
+.ctn-banner {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding:0;
+  margin-left: 3rem;
+}
